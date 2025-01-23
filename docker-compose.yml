@@ -5,17 +5,23 @@ services:
     build:
       context: ./users
     ports:
-      - "5002:5000"
+      - "5002:5002"
     depends_on:
       - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
   
   quotes:
     build:
       context: ./quotes
     ports:
-      - "5001:5000"
+      - "5001:5001"
     depends_on:
       - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
   
   search:
     build:
@@ -24,6 +30,9 @@ services:
       - "5000:5000"
     depends_on:
       - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
 
   redis:
     image: redis:7.0.11
