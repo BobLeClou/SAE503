@@ -11,7 +11,6 @@ REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
 REDIS_DB = int(os.getenv("REDIS_DB", 0))
 APP_PORT = int(os.getenv("APP_PORT", 5001))
 ADMIN_KEY = os.getenv("ADMIN_KEY", "default_key")
-CSV_FILE_USERS = os.getenv("CSV_FILE", "initial_data_users.csv")
 CSV_FILE_QUOTES = os.getenv("CSV_FILE", "initial_data_quotes.csv")
 
 # Initialisation de Flask et Swagger
