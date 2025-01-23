@@ -9,7 +9,7 @@ from functools import wraps
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
 REDIS_DB = int(os.getenv("REDIS_DB", 0))
-APP_PORT = int(os.getenv("APP_PORT", 5002))
+APP_PORT = int(os.getenv("APP_PORT", 5000))
 ADMIN_KEY = os.getenv("ADMIN_KEY", "default_key")
 CSV_FILE_USERS = os.getenv("CSV_FILE", "initial_data_users.csv")
 CSV_FILE_QUOTES = os.getenv("CSV_FILE", "initial_data_quotes.csv")
