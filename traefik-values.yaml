@@ -1,0 +1,10 @@
+deployment:
+  kind: DaemonSet
+providers:
+  kubernetesCRD:
+    enabled: true
+service:
+  type: LoadBalancer
+ingressRoute:
+  dashboard:
+    enabled: false
