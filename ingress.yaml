@@ -18,7 +18,6 @@ spec:
             name: users-service
             port:
               number: 5000
-      paths:
       - path: /quotes
         pathType: Prefix
         backend:
@@ -26,7 +25,6 @@ spec:
             name: quotes-service
             port:
               number: 5000
-      paths:
       - path: /search
         pathType: Prefix
         backend:
