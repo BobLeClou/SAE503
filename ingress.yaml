@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-ingress
+  namespace: traefik-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: "web"
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: api.local
+    http:
+      paths:
+      - path: /users
+        pathType: Prefix
+        backend:
+          service:
+            name: users-service
+            port:
+              number: 5000
+      paths:
+      - path: /quotes
+        pathType: Prefix
+        backend:
+          service:
+            name: quotes-service
+            port:
+              number: 5000
+      paths:
+      - path: /search
+        pathType: Prefix
+        backend:
+          service:
+            name: search-service
+            port:
+              number: 5000
