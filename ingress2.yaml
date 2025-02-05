@@ -2,13 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: api-ingress
-  namespace: production
+  namespace: qualification
   annotations:
     kubernetes.io/ingress.class: traefik
 spec:
   ingressClassName: traefik
   rules:
-  - host: prod.192.168.53.103.nip.io
+  - host: qualif.192.168.53.103.nip.io
     http:
       paths:
       - path: /users

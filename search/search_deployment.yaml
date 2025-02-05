@@ -14,6 +14,11 @@ spec:
     spec:
       containers:
       - name: search-api
-        image: search-api:latest
+        image: amaury1305/search-api:latest
         ports:
         - containerPort: 5000
+        env:
+          - name: REDIS_HOST
+            value: "redis-service"  # Le nom du service Redis que tu viens de créer
+          - name: REDIS_PORT
+            value: "6379"  # Le port de Redis
